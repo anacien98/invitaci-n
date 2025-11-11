@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mystyles.css">
+<title>Annie's Birthday</title>
+</head>
+<body>
+
+<!-- Introducción -->
+<div class="introduccion">
+    <img src="/img/touch.png" id="img1" class="scroll-fade">
+    <img src="/img/logos/logo-2.png" id="img2" class="scroll-fade">
+    <p class="intro-txt scroll-fade">
+        Una noche donde el deseo se viste de negro, las miradas susurran secretos y el vino guarda promesas que nadie debe romper.
+    </p>
+    
+    <hr class="scroll-fade">
+
+    <p class="intro-txt scroll-fade">
+        Te invito a celebrar mi cumpleaños en una velada que no promete inocencia, sino placer, belleza y misterio.
+    </p>
+</div>
+
+<!-- Información -->
+<div class="informacion">
+    <img src="/img/chess.png" id="img3" class="scroll-fade">
+
+    <ul class="lista-info">
+        <li class="scroll-fade"><img src="/img/iconos/ubicacion.png">Restaurante Totorou </li>
+        <li class="scroll-fade"><img src="/img/iconos/fecha.png">3 de Diciembre</li>
+        <li class="scroll-fade"><img src="/img/iconos/horario.png">7:30 p.m</li>
+    </ul>
+
+    <a href="https://maps.app.goo.gl/mDkrztD2jWinGRKp9" class="btn scroll-fade">Ubicación</a>
+
+    <hr class="scroll-fade">
+</div>
+
+
+<br>
+
+<br>
+<!-- Dresscode -->
+<div class="dresscode">
+    <br>
+    <p id="dc-txt" class="scroll-fade">DRESSCODE</p>
+    <br>
+    <img id="img4" src="/img/dress.png" class="scroll-fade">
+
+    <p class="info-txt scroll-fade">ALL BLACK</p>
+    <p class="info-txt scroll-fade">Accesorios en tonos plata, dorado o rojo</p>
+
+    <div class="dc-op">
+        <img src="/img/of2.png" class="scroll-fade">
+        <img src="/img/of1.png" class="scroll-fade">
+    </div>
+</div>
+
+<!-- Confirmación -->
+<div class="confirmacion">
+    <img id="img5" src="/img/last.png" class="scroll-fade">
+
+    <br>
+
+    <p class="info-txt scroll-fade">Sería todo un honor que me puedas acompañar.</p> 
+    <p class="info-txt scroll-fade">Por favor hazmelo saber dando click al botón de confirmación</p>
+
+    <a href="https://api.whatsapp.com/send?phone=+526462083937&text=Hola,%20confirmo%20mi%20asistencia%20a%20tu%20cumplea%C3%B1os" class="btn scroll-fade">Confirmación</a>
+
+    <p class="info-txt scroll-fade">"La oscuridad se vuelve arte… y el deseo, celebración."</p>
+    <img id="img6" src="/img/logos/logo-3.png" class="scroll-fade">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll('.scroll-fade');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>
